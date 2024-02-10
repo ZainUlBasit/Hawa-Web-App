@@ -5,10 +5,16 @@ import NavItem from "./NavItem";
 import { NavData } from "../../assets/NavData";
 import NavLogoBlack from "../../assets/logoblack.png";
 import NavLogoWhite from "../../assets/logowhite.png";
+import { FaBars } from "react-icons/fa";
+import { FaBarsProgress } from "react-icons/fa6";
+import { LiaCrossSolid } from "react-icons/lia";
+import { ImCross } from "react-icons/im";
+import SwipeableTemporaryDrawer from "./SideMenu";
 
 const Navbar = () => {
   const [activeNavItem, setActiveNavItem] = useState("");
   const [scrolled, setScrolled] = useState(false);
+  const [DrawerOpen, setDrawerOpen] = useState(false);
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -44,7 +50,7 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`!z-20 w-full max767:hidden ${
+        className={`!z-20 w-full ${
           scrolled
             ? "fixed bg-[#000] h-[15vh]"
             : "bg-transparent absolute h-[15vh]"
@@ -59,7 +65,7 @@ const Navbar = () => {
             />
           </Link>
           {/* Middle Nav Items */}
-          <nav className="flex items-center justify-between font-[Ubuntu] gap-x-7 z-100">
+          <nav className="max1200:hidden flex items-center justify-between font-[Ubuntu] gap-x-7 z-100">
             {NavData.map((data) => (
               <NavItem
                 scrolled={scrolled}
@@ -84,8 +90,16 @@ const Navbar = () => {
               Register
             </button>
           </nav>
+          <div className="min1300:hidden">
+            {!DrawerOpen ? (
+              <FaBarsProgress className="text-white text-4xl cursor-pointer" onClick={()=>setDrawerOpen(true)} />
+            ) : (
+              <ImCross className="text-white text-3xl cursor-pointer" onClick={()=>setDrawerOpen(false)} />
+            )}
+          </div>
         </div>
       </div>
+      <SwipeableTemporaryDrawer open={DrawerOpen} setOpen={setDrawerOpen}/>
     </>
   );
 };

@@ -7,7 +7,7 @@ const Banner = () => {
   return (
     <div className="overflow-hidden flex items-center justify-center gap-x-5 py-10 bg-[#000] shadow-[rgba(0,_0,_0,_.7)_0px_-60px_100px_-7px] flex-wrap">
       <img src={BannerSidePhoto} alt="not found" className="w-[450px]" />
-      <div className="flex flex-col items-start gap-y-3 py-3 px-3 ">
+      <div className="flex flex-col items-start gap-y-2 px-3 h-full py-6">
         {[
           {
             desc: "Leading international employment promoter specializing in overseas recruitment.",
@@ -29,9 +29,9 @@ const Banner = () => {
           },
         ].map((dt) => {
           return (
-            <span className="flex items-center gap-x-2 font-[400]" style={{fontFamily:"Hammersmith One"}}>
-              <TiTick className="text-[1.5rem] text-[#FF8D00]" />
-              <span className="text-white select-none text-[1.1rem]">{dt.desc}</span>
+            <span className="flex items-start gap-x-2 font-[400]" style={{fontFamily:"Hammersmith One"}}>
+              <TiTick className="text-[2rem] text-[#FF8D00]" />
+              <span className="text-white select-none text-[1rem]">{dt.desc}</span>
             </span>
           );
         })}

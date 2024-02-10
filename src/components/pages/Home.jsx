@@ -20,16 +20,22 @@ import {
   CarouselWrapperHorizontal,
 } from "../Wrapper/CarouselWrapper";
 import HomeV from "../../assets/videos/HomeBg22.mp4";
-
+import {
+  HeaderMiddleBlock,
+  HeaderWrapper,
+  Overlay,
+} from "../Wrapper/Home/HomeWrapper";
+import backgroundImage from "../../assets/team.jpg";
 const Home = () => {
   const textArray = [
-    "zain",
-    "basit",
-    "cousins",
-    "doctor",
-    "eagle",
-    "feather",
-    "google",
+    "Oil & Gas Petrolchemicals",
+    "Civil Construction",
+    "Aviation & Shipping",
+    "Hospitality & Healthcare",
+    "Heavy Industry",
+    "FMCG & Logistics",
+    "Marine & Mining",
+    "Power & Energy",
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [Changing, setChanging] = useState(false);
@@ -60,17 +66,15 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <div className="w-full h-screen m-0 p-0 BgImage flex justify-center items-center overflow-hidden">
-        <div className="overlay absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,.48)]"></div>
-        <div className="absolute top-0 left-0 h-[100%] w-full flex justify-center items-center [text-shadow:2px_2px_30px_var(--tw-shadow-color)] shadow-[#000]">
-          <span className="flex justify-center items-center font-[Lobster] tracking-wide capitalize text-white text-[3rem] font-bold drop-shadow-[100px] shadow-[#F17020] z-9 w-fit text-center flex-col">
+      <HeaderWrapper>
+        <Overlay />
+        <HeaderMiddleBlock>
+          <span className="HeaderMiddleBlockText">
             The leading specialist construction <br />
             & technical recruitment agency for
             <br />
             <div
-              className={`text-[#F17020] text-[4rem] capitalize ${
-                Changing ? "fade-in" : "fade-out"
-              }`}
+              className={`ChangingText ${Changing ? "fade-in" : "fade-out"}`}
             >
               {textArray[currentIndex]}
             </div>
@@ -84,7 +88,7 @@ const Home = () => {
               {/* <button>I'm Looking to hire</button> */}
             </div>
           </span>
-        </div>
+        </HeaderMiddleBlock>
 
         <div className="BgVideo">
           <video autoPlay muted loop playsInline>
@@ -93,7 +97,7 @@ const Home = () => {
           </video>
           {/* Your other content goes here */}
         </div>
-      </div>
+      </HeaderWrapper>
       <Banner />
       {/* carousel 1 */}
       <CarouselWrapper>
@@ -198,6 +202,19 @@ const Home = () => {
           </Slider>
         </div>
       </CarouselWrapper>
+      {/* Text between carousel */}
+      <div
+        className="w-full text-center font-bold text-[2.3rem] py-10 text-white my-10"
+        style={{
+          fontFamily: "Open Sans",
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          
+        }}
+      >
+        Recruitment Expertise in Various Sectors.
+      </div>
       {/* carousel 2 */}
       <CarouselWrapper>
         <div className="w-[20%] min-w-[300px] text-wrapper">
@@ -304,7 +321,7 @@ const Home = () => {
         </div>
       </CarouselWrapper>
       {/* Latest job search */}
-      <CarouselWrapperHorizontal className="gap-y-20 py-10 bg-[aliceblue]">
+      {/* <CarouselWrapperHorizontal className="gap-y-20 py-10 bg-[aliceblue]">
         <h1 className="font-bold font-[Ubuntu] text-5xl text-center text-wrapper">
           Latest jobs <span className="text-[#F17020]">Search all jobs</span>
         </h1>
@@ -390,7 +407,7 @@ const Home = () => {
             })}
           </Slider>
         </div>
-      </CarouselWrapperHorizontal>
+      </CarouselWrapperHorizontal> */}
 
       <Footer />
     </>

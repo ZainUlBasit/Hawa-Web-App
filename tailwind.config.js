@@ -13,6 +13,8 @@ export default {
       max550: { max: "550px" },
       max1200: { max: "1200px" },
       max767: { max: "767px" },
+      max1200: { max: "1200px" },
+      min1300: { min: "1200px" },
       max400: { max: "400px" },
       max1056: { max: "1056px" },
       maxWeb1: { min: "1920px" },
