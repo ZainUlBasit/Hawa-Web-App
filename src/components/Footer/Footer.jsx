@@ -16,9 +16,12 @@ const Footer = () => {
           <RightCard />
         </CardWrapper>
         <FooterLine />
-        <div className="text-white select-none pt-6 text-center font-[Ubuntu] font-[300]">
-          Copyright © 2024 HAWA All rights reserved. <br /> Privacy &
-          PolicyTerms & Conditions
+        <div
+          style={{ fontFamily: "Hammersmith One" }}
+          className="text-white select-none pt-6 text-center !font-[Hammersmith One]"
+        >
+          Copyright © 2024 HAWA All rights reserved.
+          <br /> Privacy & PolicyTerms & Conditions
         </div>
       </div>
     </>

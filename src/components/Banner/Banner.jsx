@@ -29,9 +29,9 @@ const Banner = () => {
           },
         ].map((dt) => {
           return (
-            <span className="flex items-center gap-x-2">
+            <span className="flex items-center gap-x-2 font-[400]" style={{fontFamily:"Hammersmith One"}}>
               <TiTick className="text-[1.5rem] text-[#FF8D00]" />
-              <span className="text-white select-none">{dt.desc}</span>
+              <span className="text-white select-none text-[1.1rem]">{dt.desc}</span>
             </span>
           );
         })}
