@@ -1,0 +1,44 @@
+import React from "react";
+import { TiTick } from "react-icons/ti";
+import BannerSidePhoto from "../../assets/team.jpg";
+import Button from "../Buttons/Button";
+
+const Banner = () => {
+  return (
+    <div className="overflow-hidden flex items-center justify-center gap-x-5 py-10 bg-[#000] shadow-[rgba(0,_0,_0,_.7)_0px_-60px_100px_-7px] flex-wrap">
+      <img src={BannerSidePhoto} alt="not found" className="w-[450px]" />
+      <div className="flex flex-col items-start gap-y-3 py-3 px-3 ">
+        {[
+          {
+            desc: "Leading international employment promoter specializing in overseas recruitment.",
+          },
+          {
+            desc: "Established in 2012, facilitating opportunities worldwide for skilled professionals.",
+          },
+          {
+            desc: "Expertise in recruitment for Sales, Operations, Commercial, Management & Engineering roles.",
+          },
+          {
+            desc: "Committed consultants providing a service grounded in quality, honesty, and integrity.",
+          },
+          {
+            desc: "In-depth knowledge of the global employment landscape, specializing in overseas placements.",
+          },
+          {
+            desc: "Proudly placing over 1000 candidates in rewarding international careers.",
+          },
+        ].map((dt) => {
+          return (
+            <span className="flex items-center gap-x-2">
+              <TiTick className="text-[1.5rem] text-[#FF8D00]" />
+              <span className="text-white select-none">{dt.desc}</span>
+            </span>
+          );
+        })}
+        <Button Width={"w-[200px] mt-3"} title="Learn more about us" />;
+      </div>
+    </div>
+  );
+};
+
+export default Banner;
