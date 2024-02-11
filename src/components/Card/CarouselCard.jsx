@@ -39,9 +39,10 @@ const CarouselCard = ({ Icon, title, img, desc, i }) => {
             }`}
           >
             {desc &&
-              desc.split(",").map((item, index) => (
+              desc.split("Per").map((item, index) => (
                 <React.Fragment key={index}>
-                  {item},
+                  {index === 1 && "Per"}
+                  {item}
                   <br />
                 </React.Fragment>
               ))}
