@@ -29,25 +29,37 @@ export const TypicalJobsData = [
   {
     img: cardAPic,
     icon: FaBuildingColumns,
-    title: "Equipment In-Charge - Abqaiq",
+    title: "Equipment In-Charge",
     desc: "1800 - 2500 SAR Per Month ",
   },
   {
     img: cardAPic,
     icon: FaBuildingColumns,
-    title: "Multi-Equipment Operator - Abqaiq",
+    title: "Multi-Equipment Operator",
     desc: "1200 SAR + OT Per Month ",
   },
   {
     img: cardAPic,
     icon: FaBuildingColumns,
-    title: "Supervisor - Hydro jetting",
+    title: "Hydro jetting Supervisor",
     desc: "1800 - 2500 SAR Per Month ",
   },
   {
     img: cardAPic,
     icon: FaBuildingColumns,
-    title: "WPR - Hydro jetting",
+    title: "Civil Supervisor",
+    desc: "1800 - 2500 SAR Per Month ",
+  },
+  {
+    img: cardAPic,
+    icon: FaBuildingColumns,
+    title: "Mechanical Supervisor",
+    desc: "1800 - 2500 SAR Per Month ",
+  },
+  {
+    img: cardAPic,
+    icon: FaBuildingColumns,
+    title: "WPR - Work Permit Reciever",
     desc: "1300 -1500 + OT Per Month ",
   },
   {

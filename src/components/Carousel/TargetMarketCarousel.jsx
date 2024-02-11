@@ -5,8 +5,21 @@ import Slider from "react-slick";
 import { FaBuildingColumns } from "react-icons/fa6";
 import CarouselCard from "../Card/CarouselCard";
 import { TargetMarketsData } from "../../assets/Data/TargetMarketsData";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 const TargetMarketCarousel = () => {
+  // Define custom arrow components with react-icons
+  const PrevArrow = (props) => (
+    <div {...props} className="slick-prev">
+      <FiChevronLeft size={30} color="black" className="!-m-5 !-mx-2" />
+    </div>
+  );
+
+  const NextArrow = (props) => (
+    <div {...props} className="slick-next">
+      <FiChevronRight size={30} color="black" className="!-m-5 !-mx-3 !" />
+    </div>
+  );
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
@@ -37,13 +50,15 @@ const TargetMarketCarousel = () => {
           dots={false}
           infinite={true}
           speed={500}
-          slidesToShow={3} // Number of slides to show at once
+          slidesToShow={3}
           slidesToScroll={1}
           autoplay={true}
           draggable={true}
           centerMode={windowWidth < 500 ? true : true}
-          centerPadding={windowWidth < 400 ? "20%" : "0"} // Adjust centerPadding for centering
-          arrows={false}
+          centerPadding={windowWidth < 400 ? "20%" : "0"}
+          arrows={true}
+          prevArrow={<PrevArrow />}
+          nextArrow={<NextArrow />}
           responsive={[
             {
               breakpoint: 420,
@@ -66,16 +81,14 @@ const TargetMarketCarousel = () => {
             },
           ]}
         >
-          {TargetMarketsData.map((dt, i) => {
-            return (
-              <CarouselCard
-                Icon={dt.icon}
-                title={dt.title}
-                i={i}
-                img={dt.img}
-              />
-            );
-          })}
+          {TargetMarketsData.map((dt, i) => (
+            <CarouselCard
+              key={i}
+              Icon={dt.icon}
+              title={dt.title}
+              img={dt.img}
+            />
+          ))}
         </Slider>
       </div>
     </CarouselWrapper>

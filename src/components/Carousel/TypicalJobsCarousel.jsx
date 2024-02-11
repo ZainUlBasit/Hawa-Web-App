@@ -6,6 +6,7 @@ import Slider from "react-slick";
 import { FaBuildingColumns } from "react-icons/fa6";
 import CarouselCard from "../Card/CarouselCard";
 import { TypicalJobsData } from "../../assets/Data/TypicalJobsData";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 const TypicalJobsCarousel = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -18,6 +19,18 @@ const TypicalJobsCarousel = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  const PrevArrow = (props) => (
+    <div {...props} className="slick-prev">
+      <FiChevronLeft size={30} color="black" className="!-m-5 !-mx-2" />
+    </div>
+  );
+
+  const NextArrow = (props) => (
+    <div {...props} className="slick-next">
+      <FiChevronRight size={30} color="black" className="!-m-5 !-mx-3 !" />
+    </div>
+  );
   return (
     <CarouselWrapper>
       <div className="w-[20%] min-w-[300px] text-wrapper">
@@ -41,7 +54,9 @@ const TypicalJobsCarousel = () => {
           draggable={true}
           centerMode={windowWidth < 500 ? true : true}
           centerPadding={windowWidth < 400 ? "20%" : "0"} // Adjust centerPadding for centering
-          arrows={false}
+          arrows={true}
+          prevArrow={<PrevArrow />}
+          nextArrow={<NextArrow />}
           responsive={[
             {
               breakpoint: 420,

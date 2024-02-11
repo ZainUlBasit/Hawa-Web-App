@@ -12,17 +12,17 @@ const RightCard = () => {
         {
           Icon: FaBlenderPhone,
           HeaderText: "Call Us On",
-          DetailText: "+92 777 555 0000",
+          DetailText: "091-5253127",
         },
         {
           Icon: PiMapPinLineFill,
           HeaderText: "Address",
-          DetailText: "Suite 20 Golden Street USA",
+          DetailText: `1st Floor, ( FF-322 ) Deans Trade Center Peshawar Saddar.`,
         },
         {
           Icon: MdOutlineAttachEmail,
           HeaderText: "Email",
-          DetailText: "info@example.com",
+          DetailText: "suleman8297@gmail.com",
         },
       ].map((data, i) => {
         return (

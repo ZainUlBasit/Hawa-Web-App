@@ -14,6 +14,7 @@ const RightCardItems = ({ Icon, HeaderText, DetailText, Last }) => {
       <div className="flex flex-col font-[Ubuntu]">
         <span className="font-bold">{`${HeaderText}:`}</span>
         <span>{`${DetailText}`}</span>
+        {HeaderText === "Address" ? <span>{`Branch Office: Islamabad Pakistan`}</span> : ""}
       </div>
     </div>
   );

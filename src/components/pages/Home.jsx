@@ -3,7 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import HomeBg from "../../assets/HomeBGG.jpg";
 import cardPic from "../../assets/cardPic.jpg";
 import cardAPic from "../../assets/about.jpg";
-import "./Home.css";
+// import "./Home.css";
 import Footer from "../Footer/Footer";
 import Banner from "../Banner/Banner";
 import CarouselSlider from "../Carousel/CarouselSlider";
@@ -29,6 +29,7 @@ import backgroundImage from "../../assets/team.jpg";
 import { TargetMarketsData } from "../../assets/Data/TargetMarketsData";
 import TypicalJobsCarousel from "../Carousel/TypicalJobsCarousel";
 import TargetMarketCarousel from "../Carousel/TargetMarketCarousel";
+import HomeHeader from "../Header/HomeHeader";
 const Home = () => {
   const textArray = [
     "Oil & Gas Petrolchemicals",
@@ -69,8 +70,11 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <HeaderWrapper>
-        <Overlay />
+      <HomeHeader
+        Src={
+          "https://firebasestorage.googleapis.com/v0/b/hawa-oversease.appspot.com/o/HomeBg22.mp4?alt=media&token=1072d27e-3795-466c-b640-7a3228d04b45"
+        }
+      >
         <HeaderMiddleBlock>
           <span className="HeaderMiddleBlockText">
             The leading specialist construction <br />
@@ -92,19 +96,7 @@ const Home = () => {
             </div>
           </span>
         </HeaderMiddleBlock>
-
-        <div className="BgVideo">
-          <video autoPlay muted loop playsInline>
-            <source
-              src="https://firebasestorage.googleapis.com/v0/b/hawa-oversease.appspot.com/o/HomeBg22.mp4?alt=media&token=1072d27e-3795-466c-b640-7a3228d04b45"
-              type="video/mp4"
-              muted={true}
-            />
-            Your browser does not support the video tag.
-          </video>
-          {/* Your other content goes here */}
-        </div>
-      </HeaderWrapper>
+      </HomeHeader>
       <Banner />
       {/* carousel 1 */}
       <TypicalJobsCarousel />
