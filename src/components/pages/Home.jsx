@@ -26,6 +26,7 @@ import {
   Overlay,
 } from "../Wrapper/Home/HomeWrapper";
 import backgroundImage from "../../assets/team.jpg";
+import { TypicalJobsData } from "../../assets/Data/TypicalJobsData";
 const Home = () => {
   const textArray = [
     "Oil & Gas Petrolchemicals",
@@ -145,50 +146,7 @@ const Home = () => {
               },
             ]}
           >
-            {[
-              {
-                img: cardAPic,
-                title: "Sales",
-                icon: FaBuildingColumns,
-                desc: "Hire Controller, Adminintrators,Hire Controller, Adminintrators",
-              },
-              {
-                img: cardAPic,
-                title: "Sales",
-                icon: FaBuildingColumns,
-                desc: "Hire Controller, Adminintrators,Hire Controller, Adminintrators",
-              },
-              {
-                img: cardAPic,
-                title: "Sales",
-                icon: FaBuildingColumns,
-                desc: "Hire Controller, Adminintrators,Hire Controller, Adminintrators",
-              },
-              {
-                img: cardAPic,
-                title: "Sales",
-                icon: FaBuildingColumns,
-                desc: "Hire Controller, Adminintrators,Hire Controller, Adminintrators",
-              },
-              {
-                img: cardAPic,
-                title: "Sales",
-                icon: FaBuildingColumns,
-                desc: "Hire Controller, Adminintrators,Hire Controller, Adminintrators",
-              },
-              {
-                img: cardAPic,
-                title: "Sales",
-                icon: FaBuildingColumns,
-                desc: "Hire Controller, Adminintrators,Hire Controller, Adminintrators",
-              },
-              {
-                img: cardAPic,
-                title: "Sales",
-                icon: FaBuildingColumns,
-                desc: "Hire Controller, Adminintrators,Hire Controller, Adminintrators",
-              },
-            ].map((dt, i) => {
+            {TypicalJobsData.map((dt, i) => {
               return (
                 <CarouselCard
                   Icon={dt.icon}
@@ -210,7 +168,6 @@ const Home = () => {
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          
         }}
       >
         Recruitment Expertise in Various Sectors.
