@@ -27,7 +27,7 @@ const CarouselCard = ({ Icon, title, img, desc, i }) => {
         }`}
       >
         <Icon className="text-white text-3xl drop-shadow-lg" />
-        <span className="text-white text-2xl font-bold font-[Ubuntu] shadow-lg text-center">
+        <span className="text-white text-2xl font-bold font-[Ubuntu] text-center">
           {title}
         </span>
         {desc && (
