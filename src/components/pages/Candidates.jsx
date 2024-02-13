@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import CandidatesHeader from "../Header/CandidatesHeader";
 import Banner from "../Banner/Banner";
@@ -6,8 +6,22 @@ import { CarouselWrapperHorizontal } from "../Wrapper/CarouselWrapper";
 import Slider from "react-slick";
 import { FaBuildingColumns } from "react-icons/fa6";
 import JobCard from "../Card/JobCard";
+import ReactLogo from "../../assets/candidates.svg";
+import ReactLogo1 from "../../assets/candidates1.svg";
+import TargetMarketCarousel from "../Carousel/TargetMarketCarousel";
+import Footer from "../Footer/Footer";
 
 const Candidates = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <>
       <Navbar />
@@ -27,6 +41,7 @@ const Candidates = () => {
             autoplay={true}
             draggable={true}
             centerMode={true}
+            centerPadding={windowWidth < 400 ? "20%" : "0"}
             // centerPadding={} // Adjust centerPadding for centering
             // arrows={false}
             responsive={[
@@ -100,6 +115,10 @@ const Candidates = () => {
           </Slider>
         </div>
       </CarouselWrapperHorizontal>
+      <img src={ReactLogo} alt="React Logo" />
+      <img src={ReactLogo1} alt="React Logo" />
+      <TargetMarketCarousel />
+      <Footer />
     </>
   );
 };

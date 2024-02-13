@@ -92,7 +92,7 @@ const Home = () => {
             >
               {textArray[currentIndex]}
             </div>
-            <div className="flex gap-x-10 z-10 mt-5">
+            <div className="flex gap-x-10 z-10 mt-5 HeaderMiddleBlockButtons">
               <button className="px-5 py-3 bg-[#F17020] text-[1rem] font-[Ubuntu] capitalize hover:bg-[#ca4e00] transition-all duration-700 ease-in-out rounded-lg" onClick={()=>navigate("/jobs")}>
                 I'm Looking for a job
               </button>

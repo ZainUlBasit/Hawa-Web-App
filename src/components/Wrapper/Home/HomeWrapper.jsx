@@ -80,7 +80,7 @@ export const OverlayB = styled.div`
   height: 50vh;
   background: rgba(0, 0, 0, 0.48);
 `;
-export const OverlayC= styled.div`
+export const OverlayC = styled.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -104,7 +104,7 @@ export const HeaderMiddleBlock = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.05em !important;
     text-transform: capitalize;
     color: #fff;
     font-size: 3rem;
@@ -121,6 +121,18 @@ export const HeaderMiddleBlock = styled.div`
       font-size: 3rem;
       text-transform: capitalize;
     }
+    @media (max-width: 700px) {
+      font-size: 2rem /* 18px */;
+      .ChangingText {
+        font-size: 2rem;
+      }
+    }
+    @media (max-width: 450px) {
+      font-size: 1.8rem /* 18px */;
+      .ChangingText {
+        font-size: 1.8rem;
+      }
+    }
     .fade-in {
       opacity: 1;
       transition: opacity 1s ease-in-out;
@@ -128,6 +140,12 @@ export const HeaderMiddleBlock = styled.div`
     .fade-out {
       opacity: 0;
       transition: opacity 1s ease-in-out;
+    }
+  }
+  .HeaderMiddleBlockButtons {
+    @media (max-width: 510px) {
+      flex-direction: column;
+      row-gap: 2rem;
     }
   }
 `;
