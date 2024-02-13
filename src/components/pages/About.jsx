@@ -9,6 +9,7 @@ import SimpleSlider from "../Carousel/CarouselSlider";
 import CompleteC from "../Card/CompleteCarousel";
 import HomeHeader from "../Header/HomeHeader";
 import Banner from "../Banner/Banner";
+import Footer from "../Footer/Footer";
 
 const About = () => {
   return (
@@ -50,6 +51,7 @@ const About = () => {
         </div>
       </div>
       <Banner />
+      <Footer />
     </>
   );
 };
