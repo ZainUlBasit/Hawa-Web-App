@@ -58,10 +58,16 @@ const Navbar = () => {
       >
         <div className="w-[90%]  maxWeb1:max-w-[1900px] maxWeb2:max-w-[2500px] maxWeb3:max-w-[3800px] maxWeb4:max-w-[3400px] flex justify-between items-center z-100">
           {/* Left side Logo */}
-          <Link to={"/"} onClick={() => handleNavItemClick("HOME")}>
+          <Link to={"/"} onClick={() => handleNavItemClick("HOME")} className="flex items-center gap-x-2">
+            <img
+              src={
+                "https://firebasestorage.googleapis.com/v0/b/hawa-oversease.appspot.com/o/logos%2Flogo.png?alt=media&token=a005801c-85bb-40b9-9593-e9fc4f6ffb20"
+              }
+              className="h-[10vh] maxWeb1:h-[120px]  maxWeb2:h-[200px] maxWeb3:h-[250px] maxWeb4:h-[220px] w-fit"
+            />
             <img
               src={false ? NavLogoBlack : NavLogoWhite}
-              className="h-[10vh] maxWeb1:h-[120px]  maxWeb2:h-[200px] maxWeb3:h-[250px] maxWeb4:h-[220px] w-fit"
+              className="h-[8vh] maxWeb1:h-[120px]  maxWeb2:h-[200px] maxWeb3:h-[250px] maxWeb4:h-[220px] w-fit"
             />
           </Link>
           {/* Middle Nav Items */}
@@ -92,14 +98,20 @@ const Navbar = () => {
           </nav>
           <div className="min1300:hidden">
             {!DrawerOpen ? (
-              <FaBarsProgress className="text-white text-4xl cursor-pointer" onClick={()=>setDrawerOpen(true)} />
+              <FaBarsProgress
+                className="text-white text-4xl cursor-pointer"
+                onClick={() => setDrawerOpen(true)}
+              />
             ) : (
-              <ImCross className="text-white text-3xl cursor-pointer" onClick={()=>setDrawerOpen(false)} />
+              <ImCross
+                className="text-white text-3xl cursor-pointer"
+                onClick={() => setDrawerOpen(false)}
+              />
             )}
           </div>
         </div>
       </div>
-      <SwipeableTemporaryDrawer open={DrawerOpen} setOpen={setDrawerOpen}/>
+      <SwipeableTemporaryDrawer open={DrawerOpen} setOpen={setDrawerOpen} />
     </>
   );
 };

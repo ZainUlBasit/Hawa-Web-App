@@ -41,6 +41,14 @@ export const Overlay = styled.div`
   height: 100%;
   background: rgba(0, 0, 0, 0.48);
 `;
+export const OverlayB = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50vh;
+  background: rgba(0, 0, 0, 0.48);
+`;
 
 export const HeaderMiddleBlock = styled.div`
   position: absolute;
