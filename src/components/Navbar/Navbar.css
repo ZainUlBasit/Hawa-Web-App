@@ -36,3 +36,9 @@
 .box-below-link {
   animation: slideIn 0.8s ease-in-out forwards; /* Use the slideIn animation */
 }
+
+@media (max-width: 510px) {
+  .Logo2 {
+    display: none;
+  }
+}

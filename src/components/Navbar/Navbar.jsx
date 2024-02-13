@@ -67,7 +67,7 @@ const Navbar = () => {
             />
             <img
               src={false ? NavLogoBlack : NavLogoWhite}
-              className="h-[8vh] maxWeb1:h-[120px]  maxWeb2:h-[200px] maxWeb3:h-[250px] maxWeb4:h-[220px] w-fit"
+              className="h-[8vh] maxWeb1:h-[120px]  maxWeb2:h-[200px] maxWeb3:h-[250px] maxWeb4:h-[220px] w-fit Logo2"
             />
           </Link>
           {/* Middle Nav Items */}
