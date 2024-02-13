@@ -8,7 +8,7 @@ const StyledCardWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   height: fit-content;
-  width: 90%;
+  /* width: 90%; */
   @media (max-width: 780px) {
     flex-direction: column;
     justify-content: center;

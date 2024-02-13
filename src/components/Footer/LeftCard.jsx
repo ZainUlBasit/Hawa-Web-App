@@ -6,7 +6,7 @@ import Logo from "../../assets/logowhite.png";
 
 const LeftCard = () => {
   return (
-    <div className="flex flex-col w-[300px] min-w-[300px] gap-y-5">
+    <div className="flex flex-col w-[300px] max-w-[300px] gap-y-5">
       <img src={Logo} alt="not" className="w-[300px]" />
       <span
         className="text-white text-wrap text-justify"

@@ -6,7 +6,7 @@ import { MdOutlineAttachEmail } from "react-icons/md";
 
 const RightCard = () => {
   return (
-    <div className="flex flex-col text-white font-[Ubuntu] bg-[#182029] gap-y-3 px-[50px] py-10 rounded-[20px] w-[380px]">
+    <div className="flex flex-col text-white font-[Ubuntu] bg-[#182029] gap-y-3 px-[50px] py-10 rounded-[20px] max-w-[380px]">
       <h1 className="font-bold text-[1.6rem]">Quick Contact!</h1>
       {[
         {
