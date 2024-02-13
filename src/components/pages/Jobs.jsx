@@ -9,7 +9,8 @@ import AuthInputPopOver from "../Popover/AuthInputPopOver";
 import PopoverCustom from "../Popover/Popover";
 import JobsCard from "../Card/JobsCard";
 import JobCard from "../Card/JobCard";
-
+import Footer from "../Footer/Footer";
+import ReactLogo from '../../assets/candidates.svg';
 const Jobs = () => {
   const [SearchText, setSearchText] = useState("");
   const [Category, setCategory] = React.useState("");
@@ -68,7 +69,7 @@ const Jobs = () => {
         </div>
       </div>
       <div className="flex justify-center items-start w-[90%] h-fit">
-        <div className="flex flex-col shadow-lg shadow-black w-fit px-10 py-10 gap-y-4 m-10 border-[1px] rounded-[20px] border-black">
+        <div className="flex flex-col shadow-lg shadow-black w-fit px-10 py-10 gap-y-4 m-10 border-[.5px] rounded-[5px]">
           <Input
             label={"Search keyword"}
             placeholder={"e.g. Hire Controller"}
@@ -153,7 +154,9 @@ const Jobs = () => {
           />
         </div>
         <div>
-          <div className="flex my-5 mt-10 font-bold text-4xl">14 jobs available</div>
+          <div className="flex my-5 mt-10 font-bold text-4xl">
+            14 jobs available
+          </div>
           <div className="flex items-center justify-between gap-10 flex-row flex-wrap m-5">
             <JobCard />
             <JobCard />
@@ -162,6 +165,8 @@ const Jobs = () => {
           </div>
         </div>
       </div>
+      <img src={ReactLogo} alt="React Logo" />
+      <Footer />
     </>
   );
 };

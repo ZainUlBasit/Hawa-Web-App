@@ -1,5 +1,36 @@
 import styled from "styled-components";
 
+export const HeaderWrapperCandidate = styled.div`
+  display: flex;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  justify-content: start;
+  align-items: start;
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  .BgVideo {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 50%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+      object-fit: cover;
+    }
+  }
+`;
 export const HeaderWrapper = styled.div`
   display: flex;
   overflow: hidden;
@@ -48,6 +79,14 @@ export const OverlayB = styled.div`
   width: 100%;
   height: 50vh;
   background: rgba(0, 0, 0, 0.48);
+`;
+export const OverlayC= styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50vh;
+  background: rgba(0, 0, 0, 0.6);
 `;
 
 export const HeaderMiddleBlock = styled.div`

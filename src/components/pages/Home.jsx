@@ -33,6 +33,7 @@ import HomeHeader from "../Header/HomeHeader";
 import MultipleItems from "../Carousel/LogoCarousel";
 import LogoCarousel from "../Carousel/LogoCarousel";
 import Carousel from "nuka-carousel";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const textArray = [
@@ -71,6 +72,8 @@ const Home = () => {
     return () => clearInterval(intervalId); // Clear the interval on component unmount
   }, []); // Empty dependency array ensures the effect runs only once
 
+  const navigate = useNavigate()
+
   return (
     <>
       <Navbar />
@@ -90,7 +93,7 @@ const Home = () => {
               {textArray[currentIndex]}
             </div>
             <div className="flex gap-x-10 z-10 mt-5">
-              <button className="px-5 py-3 bg-[#F17020] text-[1rem] font-[Ubuntu] capitalize hover:bg-[#ca4e00] transition-all duration-700 ease-in-out rounded-lg">
+              <button className="px-5 py-3 bg-[#F17020] text-[1rem] font-[Ubuntu] capitalize hover:bg-[#ca4e00] transition-all duration-700 ease-in-out rounded-lg" onClick={()=>navigate("/jobs")}>
                 I'm Looking for a job
               </button>
               <button className="px-5 py-3 bg-transparent border-white border-2 text-[1rem] font-[Ubuntu] capitalize hover:bg-[#fff] hover:text-[#F17020] transition-all duration-700 ease-in-out rounded-lg">

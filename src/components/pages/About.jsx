@@ -21,9 +21,11 @@ const About = () => {
         }
       />
       <Banner />
-      <div className="flex justify-center items-center gap-x-10 px-10 py-[60px]">
+      <div className="flex justify-center items-center gap-x-20 px-10 py-[70px]">
         <div className="card w-[280px] flex flex-col justify-center items-center gap-y-7">
           <img src={Sales} alt="changes" className="w-[150px]" />
+          <h1 className="font-bold text-[1.3rem]"
+          style={{fontFamily:"Open Sans"}}>Sales Recruitment</h1>
           <div className="desc text-center">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Voluptatibus tempora perferendis voluptas iusto nemo iste explicabo
@@ -33,6 +35,8 @@ const About = () => {
         </div>
         <div className="card w-[280px] flex flex-col justify-center items-center gap-y-7">
           <img src={Engineering} alt="changes" className="w-[150px]" />
+          <h1 className="font-bold text-[1.3rem]"
+          style={{fontFamily:"Open Sans"}}>Engineering Recruitment</h1>
           <div className="desc text-center">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Voluptatibus tempora perferendis voluptas iusto nemo iste explicabo
@@ -42,6 +46,8 @@ const About = () => {
         </div>
         <div className="card w-[280px] flex flex-col justify-center items-center gap-y-7">
           <img src={Commercial} alt="changes" className="w-[150px]" />
+          <h1 className="font-bold text-[1.3rem]"
+          style={{fontFamily:"Open Sans"}}>Commercial Recruitment</h1>
           <div className="desc text-center">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Voluptatibus tempora perferendis voluptas iusto nemo iste explicabo

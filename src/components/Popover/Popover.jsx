@@ -26,7 +26,7 @@ const PopoverCustom = ({
       }}
       anchorOrigin={{
         vertical: "bottom",
-        horizontal: "left",
+        horizontal: "right",
       }}
       transformOrigin={{
         vertical: "top",
