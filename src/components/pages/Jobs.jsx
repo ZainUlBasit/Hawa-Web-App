@@ -8,6 +8,7 @@ import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import AuthInputPopOver from "../Popover/AuthInputPopOver";
 import PopoverCustom from "../Popover/Popover";
 import JobsCard from "../Card/JobsCard";
+import JobCard from "../Card/JobCard";
 
 const Jobs = () => {
   const [SearchText, setSearchText] = useState("");
@@ -151,13 +152,14 @@ const Jobs = () => {
             ]}
           />
         </div>
-        <div className="flex justify-between w-[75%] flex-row flex-wrap m-5">
-          <JobsCard />
-          <JobsCard />
-          <JobsCard />
-          <JobsCard />
-          <JobsCard />
-          <JobsCard />
+        <div>
+          <div className="flex my-5 mt-10 font-bold text-4xl">14 jobs available</div>
+          <div className="flex items-center justify-between gap-10 flex-row flex-wrap m-5">
+            <JobCard />
+            <JobCard />
+            <JobCard />
+            <JobCard />
+          </div>
         </div>
       </div>
     </>
