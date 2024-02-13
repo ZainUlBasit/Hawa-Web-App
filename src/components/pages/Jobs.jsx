@@ -10,7 +10,9 @@ import PopoverCustom from "../Popover/Popover";
 import JobsCard from "../Card/JobsCard";
 import JobCard from "../Card/JobCard";
 import Footer from "../Footer/Footer";
-import ReactLogo from '../../assets/candidates.svg';
+import ReactLogo from "../../assets/candidates.svg";
+import ReactLogo1 from "../../assets/candidates1.svg";
+import "./Jobs.css";
 const Jobs = () => {
   const [SearchText, setSearchText] = useState("");
   const [Category, setCategory] = React.useState("");
@@ -68,104 +70,105 @@ const Jobs = () => {
           Latest Jobs
         </div>
       </div>
-      <div className="flex justify-center items-start w-[90%] h-fit">
-        <div className="flex flex-col shadow-lg shadow-black w-fit px-10 py-10 gap-y-4 m-10 border-[.5px] rounded-[5px]">
-          <Input
-            label={"Search keyword"}
-            placeholder={"e.g. Hire Controller"}
-            Value={SearchText}
-            setValue={setSearchText}
-            required={false}
-          />
-          <Input
-            label={"Location"}
-            placeholder={"e.g. Bristol"}
-            Value={SearchText}
-            setValue={setSearchText}
-            required={false}
-          />
-
-          <AuthInputPopOver
-            label={"Job Categories"}
-            placeholder={"Select Category..."}
-            Value={Category}
-            onClick={(data) => handleClick(data)}
-          />
-
-          <AuthInputPopOver
-            label={"Job Type"}
-            placeholder={"Select Type..."}
-            Value={Type}
-            onClick={(data) => handleClick1(data)}
-          />
-          <div className="flex flex-col w-[297px] gap-y-2">
-            <h1 className="font-bold text-lg">Salary Range</h1>
-            <label htmlFor="minRange">Min:{minValue}</label>
-            <input
-              type="range"
-              id="minRange"
-              name="minRange"
-              min={1000}
-              max={100000}
-              step={1000}
-              value={minValue}
-              onChange={handleMinChange}
+      <div className="w-full flex justify-center items-center">
+        <div className="flex justify-center items-start w-[90%] h-fit WrappedContent">
+          <div className="flex flex-col shadow-lg shadow-black w-fit px-10 py-10 gap-y-4 m-10 border-[.5px] rounded-[5px] LeftContainer">
+            <Input
+              label={"Search keyword"}
+              placeholder={"e.g. Hire Controller"}
+              Value={SearchText}
+              setValue={setSearchText}
+              required={false}
             />
-            <label htmlFor="maxRange">Max:{maxValue}</label>
-            <input
-              type="range"
-              id="maxRange"
-              name="maxRange"
-              min={10000}
-              max={200000}
-              step={1000}
-              value={maxValue}
-              onChange={handleMaxChange}
+            <Input
+              label={"Location"}
+              placeholder={"e.g. Bristol"}
+              Value={SearchText}
+              setValue={setSearchText}
+              required={false}
+            />
+
+            <AuthInputPopOver
+              label={"Job Categories"}
+              placeholder={"Select Category..."}
+              Value={Category}
+              onClick={(data) => handleClick(data)}
+            />
+
+            <AuthInputPopOver
+              label={"Job Type"}
+              placeholder={"Select Type..."}
+              Value={Type}
+              onClick={(data) => handleClick1(data)}
+            />
+            <div className="flex flex-col w-[297px] gap-y-2">
+              <h1 className="font-bold text-lg">Salary Range</h1>
+              <label htmlFor="minRange">Min:{minValue}</label>
+              <input
+                type="range"
+                id="minRange"
+                name="minRange"
+                min={1000}
+                max={100000}
+                step={1000}
+                value={minValue}
+                onChange={handleMinChange}
+              />
+              <label htmlFor="maxRange">Max:{maxValue}</label>
+              <input
+                type="range"
+                id="maxRange"
+                name="maxRange"
+                min={10000}
+                max={200000}
+                step={1000}
+                value={maxValue}
+                onChange={handleMaxChange}
+              />
+            </div>
+
+            {/* Popover */}
+            <PopoverCustom
+              id={id}
+              open={open}
+              anchorEl={anchorEl}
+              handleClose={handleClose}
+              setValue={setCategory}
+              CurrentCategory={Category}
+              Data={[
+                { title: "Engineers" },
+                { title: "Hire Controllers" },
+                { title: "Operations" },
+                { title: "Sales" },
+              ]}
+            />
+            <PopoverCustom
+              id={id1}
+              open={open1}
+              anchorEl={anchorEl1}
+              handleClose={handleClose1}
+              setValue={setType}
+              CurrentCategory={Type}
+              Data={[
+                { title: "Contract" },
+                { title: "Permanent" },
+                { title: "Temporary" },
+              ]}
             />
           </div>
-
-          {/* Popover */}
-          <PopoverCustom
-            id={id}
-            open={open}
-            anchorEl={anchorEl}
-            handleClose={handleClose}
-            setValue={setCategory}
-            CurrentCategory={Category}
-            Data={[
-              { title: "Engineers" },
-              { title: "Hire Controllers" },
-              { title: "Operations" },
-              { title: "Sales" },
-            ]}
-          />
-          <PopoverCustom
-            id={id1}
-            open={open1}
-            anchorEl={anchorEl1}
-            handleClose={handleClose1}
-            setValue={setType}
-            CurrentCategory={Type}
-            Data={[
-              { title: "Contract" },
-              { title: "Permanent" },
-              { title: "Temporary" },
-            ]}
-          />
-        </div>
-        <div>
-          <div className="flex my-5 mt-10 font-bold text-4xl">
-            14 jobs available
-          </div>
-          <div className="flex items-center justify-between gap-10 flex-row flex-wrap m-5">
-            <JobCard />
-            <JobCard />
-            <JobCard />
-            <JobCard />
+          <div className="RightCont">
+            <div className="flex my-5 mt-10 font-bold text-4xl RightContTextWrapper">
+              14 jobs available
+            </div>
+            <div className="flex items-center justify-between gap-10 flex-row flex-wrap m-5 RightContCardsWrapper">
+              <JobCard />
+              <JobCard />
+              <JobCard />
+              <JobCard />
+            </div>
           </div>
         </div>
       </div>
-      <img src={ReactLogo} alt="React Logo" />
       <Footer />
     </>
   );
