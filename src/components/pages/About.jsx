@@ -20,7 +20,7 @@ const About = () => {
         }
       />
       <Banner />
-      <div className="flex justify-center items-center gap-x-20 px-10 py-[70px]">
+      <div className="flex justify-center items-center gap-x-20 px-10 py-[70px] flex-wrap">
         <div className="card w-[280px] flex flex-col justify-center items-center gap-y-7">
           <img src={Sales} alt="changes" className="w-[150px]" />
           <h1 className="font-bold text-[1.3rem]"
