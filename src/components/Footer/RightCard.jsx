@@ -22,7 +22,7 @@ const RightCard = () => {
         {
           Icon: MdOutlineAttachEmail,
           HeaderText: "Email",
-          DetailText: "HR@hawaoverseas.com",
+          DetailText: "Marketing@hawaoverseas.com",
         },
       ].map((data, i) => {
         return (

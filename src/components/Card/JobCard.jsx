@@ -19,7 +19,7 @@ const JobCard = ({ data }) => {
             WebkitLineClamp: 1,
           }}
         >
-          {data.title ? data.title : "Business Development"}
+          {data?.title ? data.title : "Business Development"}
         </h1>
         <div className="flex flex-col gap-y-2">
           <div className="flex items-center gap-x-2 font-[Ubuntu] font-[500]">
@@ -33,7 +33,7 @@ const JobCard = ({ data }) => {
           <div className="flex items-center gap-x-2 font-[Ubuntu] font-[500]">
             <LiaMoneyBillSolid className="text-[1.3rem]" />
             <span>
-              {data.SalaryRange
+              {data?.SalaryRange
                 ? data.SalaryRange
                 : "$ 40000 - 50000 per Annum"}
             </span>
@@ -53,7 +53,7 @@ const JobCard = ({ data }) => {
                 WebkitLineClamp: 3,
               }}
             >
-              {data.desc
+              {data?.desc
                 ? data.desc
                 : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel sit magnam illum quas blanditiis dolor corrupti a commodi praesentium"}
             </span>
