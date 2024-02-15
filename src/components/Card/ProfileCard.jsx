@@ -25,7 +25,7 @@ const ProfileCard = () => {
         className="mb-7 title px-5 py-3 text-[#F17020] text-3xl border-white border-2 shadow-[5px_5px_0px_0px_rgba(255,255,255)] font-bold"
         style={{ fontFamily: "Open Sans" }}
       >
-        Company Message
+        Company Profile
       </div>
       <div className="Desc w-[90%] text-justify text-[#fff] text-xl">
         Hawa Overseas is ISO-Certified Company and has started his service in
@@ -53,7 +53,7 @@ const ProfileCard = () => {
         contentment of our workforce.
       </div>
       <Button
-        title={"Company Profile"}
+        title={"Download Company Profile"}
         Width={"w-[200px] my-10"}
         onClick={downloadProfilePDF}
       />
