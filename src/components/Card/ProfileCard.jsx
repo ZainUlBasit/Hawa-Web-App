@@ -38,7 +38,7 @@ const ProfileCard = () => {
         then 20 years of experience by supplying more then 20 companies here in
         Kingdom of Saudi Arabia and all GCC Region including Malaysia , we have
         the capabilities and strategy that allow us to provide qualified and
-        trained manpower according to client satisfaction. <br />
+        trained manpower according to client satisfaction. <br /><br />
         Hawa Overseas firmly believes in working collaboratively with a group of
         people in order to achieve goals and backs the ability to identify and
         motivate individual employees to form a team that stays together, works
