@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 const StyledCardWrapper = styled.div`
   display: flex;
-  flex-wrap: wrap;
   row-gap: 2.5rem;
+  width: 90%;
   justify-content: space-between;
   align-items: center;
   height: fit-content;
@@ -13,6 +13,8 @@ const StyledCardWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
   }
 `;
 

@@ -8,7 +8,6 @@ const NavItem = ({
   handleNavItemClick,
   scrolled,
 }) => {
-  console.log(scrolled);
   return (
     <div className="relative overflow-hidden py-[3px]">
       <Link
