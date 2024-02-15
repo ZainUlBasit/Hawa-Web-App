@@ -64,8 +64,8 @@ const About = () => {
       />
 
       <div className="flex justify-center items-center flex-col py-10 gap-y-4">
-        <div className="text-6xl text-[#F17020] font-bold border-[#F17020] border-2 shadow-[5px_5px_0px_0px_#F17020] px-7 py-4" style={{ fontFamily: "Open Sans" }}>
-          Workflow
+        <div className="text-6xl text-[#F17020] font-bold border-[#F17020] border-2 shadow-[5px_5px_0px_0px_#F17020] px-7 capitalize py-4" style={{ fontFamily: "Open Sans" }}>
+        process map of recruitment
         </div>
         <img src="https://firebasestorage.googleapis.com/v0/b/hawa-oversease.appspot.com/o/workflow.png?alt=media&token=4cb8ed41-8a5c-4cda-b967-bee4cee7e700" alt="workflow" />
       </div>

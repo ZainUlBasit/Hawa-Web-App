@@ -10,6 +10,7 @@ import ReactLogo from "../../assets/candidates.svg";
 import ReactLogo1 from "../../assets/candidates1.svg";
 import TargetMarketCarousel from "../Carousel/TargetMarketCarousel";
 import Footer from "../Footer/Footer";
+import { JobsData } from "../../assets/Data/JobsData";
 
 const Candidates = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -66,51 +67,8 @@ const Candidates = () => {
               },
             ]}
           >
-            {[
-              {
-                img: "abc",
-                title: "Sales",
-                icon: FaBuildingColumns,
-                desc: "Hire Controller, Adminintrators,Hire Controller, Adminintrators",
-              },
-              {
-                img: "abc",
-                title: "Sales",
-                icon: FaBuildingColumns,
-                desc: "Hire Controller, Adminintrators,Hire Controller, Adminintrators",
-              },
-              {
-                img: "abc",
-                title: "Sales",
-                icon: FaBuildingColumns,
-                desc: "Hire Controller, Adminintrators,Hire Controller, Adminintrators",
-              },
-              {
-                img: "abc",
-                title: "Sales",
-                icon: FaBuildingColumns,
-                desc: "Hire Controller, Adminintrators,Hire Controller, Adminintrators",
-              },
-              {
-                img: "abc",
-                title: "Sales",
-                icon: FaBuildingColumns,
-                desc: "Hire Controller, Adminintrators,Hire Controller, Adminintrators",
-              },
-              {
-                img: "abc",
-                title: "Sales",
-                icon: FaBuildingColumns,
-                desc: "Hire Controller, Adminintrators,Hire Controller, Adminintrators",
-              },
-              {
-                img: "abc",
-                title: "Sales",
-                icon: FaBuildingColumns,
-                desc: "Hire Controller, Adminintrators,Hire Controller, Adminintrators",
-              },
-            ].map((dt, i) => {
-              return <JobCard />;
+            {JobsData.map((data) => {
+              return <JobCard data={data} />;
             })}
           </Slider>
         </div>
