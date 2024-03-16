@@ -85,7 +85,7 @@ const TypicalJobsCarousel = () => {
                 Icon={dt.icon}
                 title={dt.title}
                 i={i}
-                img={dt.img}
+                // img={dt.img}
                 desc={dt.desc}
               />
             );

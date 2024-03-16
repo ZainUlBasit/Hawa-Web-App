@@ -72,7 +72,7 @@ const Home = () => {
     return () => clearInterval(intervalId); // Clear the interval on component unmount
   }, []); // Empty dependency array ensures the effect runs only once
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <>
@@ -93,7 +93,10 @@ const Home = () => {
               {textArray[currentIndex]}
             </div>
             <div className="flex gap-x-10 z-10 mt-5 HeaderMiddleBlockButtons">
-              <button className="px-5 py-3 bg-[#F17020] text-[1rem] font-[Ubuntu] capitalize hover:bg-[#ca4e00] transition-all duration-700 ease-in-out rounded-lg" onClick={()=>navigate("/jobs")}>
+              <button
+                className="px-5 py-3 bg-[#F17020] text-[1rem] font-[Ubuntu] capitalize hover:bg-[#ca4e00] transition-all duration-700 ease-in-out rounded-lg"
+                onClick={() => navigate("/jobs")}
+              >
                 I'm Looking for a job
               </button>
               <button className="px-5 py-3 bg-transparent border-white border-2 text-[1rem] font-[Ubuntu] capitalize hover:bg-[#fff] hover:text-[#F17020] transition-all duration-700 ease-in-out rounded-lg">
@@ -223,7 +226,7 @@ const Home = () => {
         </div>
         <Carousel
           autoplay={true}
-          autoplayInterval={900}
+          autoplayInterval={2000}
           wrapAround={true}
           withoutControls={true}
           slidesToShow={4}
@@ -249,7 +252,7 @@ const Home = () => {
           ].map((dt, i) => {
             return (
               <div className="h-full flex justify-center items-center">
-                <img src={dt} alt={`Logo ${i + 1}`} />
+                <img src={dt} className="h-[100px]" alt={`Logo ${i + 1}`} />
               </div>
             );
           })}

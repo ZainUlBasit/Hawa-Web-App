@@ -24,7 +24,7 @@ const SendResume = ({ open, setOpen, FullScreen }) => {
         style={{ position: "absolute", top: 10, right: 20 }}
         onClick={() => setOpen(false)}
       >
-        <FaRegWindowClose className="text-black text-4xl" />
+        <FaRegWindowClose className="text-[#FF8D00] text-4xl hover:text-[red]" />
       </IconButton>
       <div className="flex items-start px-[60px] gap-x-[50px] h-full  py-5">
         <div className="flex flex-col w-[500px] h-full justify-center">
@@ -34,7 +34,8 @@ const SendResume = ({ open, setOpen, FullScreen }) => {
           <span className="text-xl">
             Submit your resume and we will get back to you with a suitable job
             for you.
-            <br /> mail@transasia.info
+            <br />
+            <span className="font-bold underline">HR@hawaoverseas.com</span>
           </span>
         </div>
         <div className="w-fit flex flex-col gap-y-3">

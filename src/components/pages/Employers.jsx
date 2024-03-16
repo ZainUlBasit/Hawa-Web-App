@@ -30,7 +30,7 @@ const Employers = () => {
         </div>
         <Carousel
           autoplay={true}
-          autoplayInterval={900}
+          autoplayInterval={2000}
           wrapAround={true}
           withoutControls={true}
           slidesToShow={4}
@@ -56,7 +56,7 @@ const Employers = () => {
           ].map((dt, i) => {
             return (
               <div className="h-full flex justify-center items-center">
-                <img src={dt} alt={`Logo ${i + 1}`} />
+                <img src={dt} className="h-[100px]" alt={`Logo ${i + 1}`} />
               </div>
             );
           })}
