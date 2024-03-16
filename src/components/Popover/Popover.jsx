@@ -8,7 +8,7 @@ const PopoverCustom = ({
   handleClose,
   setValue,
   CurrentCategory,
-  Data
+  Data,
 }) => {
   return (
     <Popover
@@ -63,6 +63,20 @@ const PopoverCustom = ({
                 </div>
               );
             })}
+            <div
+              className="flex gap-x-3 items-center cursor-pointer"
+              onClick={() => {
+                handleClose();
+                setValue("");
+              }}
+            >
+              <input
+                type="checkbox"
+                className="mr-1 appearance-none h-5 w-5 border border-gray-300 checked:bg-white rounded-full"
+                checked={false}
+              />
+              <span>Clear</span>
+            </div>
           </div>
         </div>
       </Typography>

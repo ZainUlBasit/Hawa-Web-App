@@ -13,6 +13,7 @@ import Footer from "../Footer/Footer";
 import ReactLogo from "../../assets/candidates.svg";
 import ReactLogo1 from "../../assets/candidates1.svg";
 import "./Jobs.css";
+import { JobsData } from "../../assets/Data/JobsData";
 const Jobs = () => {
   const [SearchText, setSearchText] = useState("");
   const [Category, setCategory] = React.useState("");
@@ -56,7 +57,7 @@ const Jobs = () => {
     <>
       <Navbar />
       <div
-        className="h-[50vh] flex justify-start items-end"
+        className="h-[50vh] flex justify-start items-end fade-in"
         style={{
           fontFamily: "Open Sans",
           backgroundImage: `url(${backgroundImage})`,
@@ -70,7 +71,7 @@ const Jobs = () => {
           Latest Jobs
         </div>
       </div>
-      <div className="w-full flex justify-center items-center">
+      <div className="w-full flex justify-center items-center fade-in">
         <div className="flex justify-center items-start w-[90%] h-fit WrappedContent">
           <div className="flex flex-col shadow-lg shadow-black w-fit px-10 py-10 gap-y-4 m-10 border-[.5px] rounded-[5px] LeftContainer">
             <Input
@@ -158,13 +159,12 @@ const Jobs = () => {
           </div>
           <div className="RightCont">
             <div className="flex my-5 mt-10 font-bold text-4xl RightContTextWrapper">
-              14 jobs available
+              {JobsData.length + 1} jobs available
             </div>
             <div className="flex items-center justify-between gap-10 flex-row flex-wrap m-5 RightContCardsWrapper">
-              <JobCard />
-              <JobCard />
-              <JobCard />
-              <JobCard />
+              {JobsData.map((data) => {
+                return <JobCard data={data} />;
+              })}
             </div>
           </div>
         </div>

@@ -10,11 +10,14 @@ import { FaBarsProgress } from "react-icons/fa6";
 import { LiaCrossSolid } from "react-icons/lia";
 import { ImCross } from "react-icons/im";
 import SwipeableTemporaryDrawer from "./SideMenu";
+import SendResume from "../Modals/SendResume";
 
 const Navbar = () => {
   const [activeNavItem, setActiveNavItem] = useState("");
   const [scrolled, setScrolled] = useState(false);
   const [DrawerOpen, setDrawerOpen] = useState(false);
+
+  const [OpenModal, setOpenModal] = useState(false);
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -58,7 +61,11 @@ const Navbar = () => {
       >
         <div className="w-[90%]  maxWeb1:max-w-[1900px] maxWeb2:max-w-[2500px] maxWeb3:max-w-[3800px] maxWeb4:max-w-[3400px] flex justify-between items-center z-100">
           {/* Left side Logo */}
-          <Link to={"/"} onClick={() => handleNavItemClick("HOME")} className="flex items-center gap-x-2">
+          <Link
+            to={"/"}
+            onClick={() => handleNavItemClick("HOME")}
+            className="flex items-center gap-x-2"
+          >
             <img
               src={
                 "https://firebasestorage.googleapis.com/v0/b/hawa-oversease.appspot.com/o/logos%2Flogo.png?alt=media&token=a005801c-85bb-40b9-9593-e9fc4f6ffb20"
@@ -67,7 +74,7 @@ const Navbar = () => {
             />
             <img
               src={false ? NavLogoBlack : NavLogoWhite}
-              className="h-[8vh] maxWeb1:h-[120px]  maxWeb2:h-[200px] maxWeb3:h-[250px] maxWeb4:h-[220px] w-fit Logo2"
+              className="h-[6vh] maxWeb1:h-[120px]  maxWeb2:h-[200px] maxWeb3:h-[250px] maxWeb4:h-[220px] w-fit Logo2"
             />
           </Link>
           {/* Middle Nav Items */}
@@ -87,13 +94,12 @@ const Navbar = () => {
                 activeNavItem === "Register"
                   ? "text-[#fff] bg-[#F17020]"
                   : "text-[#F17020] bg-[#fff]"
-              } cursor-pointer transition-all ease-in-out duration-500 py-1 px-3 rounded-[10px] border-2 border-solid border-[#F17020] hover:text-[white] shadow-[inset_0_0_0_0_#F17020] hover:shadow-[inset_0_-100px_0_0_#F17020] active:scale-90  flex items-center justify-center font-[Ubuntu] text-[1rem] font-[700]`}
+              } cursor-pointer transition-all ease-in-out duration-500 py-2 px-3 rounded-[10px] border-2 border-solid border-[#F17020] hover:text-[white] shadow-[inset_0_0_0_0_#F17020] hover:shadow-[inset_0_-100px_0_0_#F17020] active:scale-90  flex items-center justify-center font-[Ubuntu] text-[1rem] font-[700]`}
               onClick={() => {
-                handleNavItemClick("Register");
-                navigate("/register");
+                setOpenModal(true);
               }}
             >
-              Register
+              Send Resume
             </button>
           </nav>
           <div className="min1300:hidden">
@@ -112,6 +118,9 @@ const Navbar = () => {
         </div>
       </div>
       <SwipeableTemporaryDrawer open={DrawerOpen} setOpen={setDrawerOpen} />
+      {OpenModal && (
+        <SendResume open={OpenModal} setOpen={setOpenModal} FullScreen={true} />
+      )}
     </>
   );
 };

@@ -27,8 +27,8 @@ const Candidates = () => {
     <>
       <Navbar />
       <CandidatesHeader />
-      <Banner />
-      <CarouselWrapperHorizontal className="gap-y-20 py-10 bg-[aliceblue]">
+      {/* <Banner /> */}
+      <CarouselWrapperHorizontal className="gap-y-20 py-10 bg-[aliceblue] fade-in">
         <h1 className="font-bold font-[Ubuntu] text-5xl text-center text-wrapper">
           Latest jobs <span className="text-[#F17020]">Search all jobs</span>
         </h1>

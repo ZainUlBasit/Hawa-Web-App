@@ -4,7 +4,7 @@ import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 const MessageCard = ({ img, title, desc, Quote }) => {
   return (
     <>
-      <div className="bg-black pb-10 flex justify-center items-center flex-col border-b-[10px] border-b-white py-[5rem]">
+      <div className="bg-black pb-10 flex justify-center items-center flex-col border-b-[10px] border-b-white py-[5rem] fade-in">
         <div
           className="mb-7 title px-5 py-3 text-[#F17020] text-3xl border-white border-2 shadow-[5px_5px_0px_0px_rgba(255,255,255)] font-bold"
           style={{ fontFamily: "Open Sans" }}
