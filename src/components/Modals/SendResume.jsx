@@ -3,6 +3,8 @@ import ModalWrapper from "./ModalWrapper";
 import { IconButton, TextField } from "@mui/material";
 import { FaRegWindowClose } from "react-icons/fa";
 import Button from "../Buttons/Button";
+import { storage } from "../../config/firebase";
+import { ref } from "firebase/storage";
 
 const SendResume = ({ open, setOpen, FullScreen }) => {
   const [Name, setName] = useState(""); // Initialize state for the input field data
@@ -17,6 +19,17 @@ const SendResume = ({ open, setOpen, FullScreen }) => {
   const [MobileNo, setMobileNo] = useState(""); // Initialize state for the input field data
   const [Message, setMessage] = useState(""); // Initialize state for the input field data
   const [Resume, setResume] = useState(""); // Initialize state for the input field data
+
+  const onSubmit = async () => {
+    return;
+    const imageRef = storage.ref(`/resumes/${Name}`);
+    try {
+      const snapshot = await imageRef.put(selectedFile);
+      const downloadURL = await snapshot.ref.getDownloadURL();
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <ModalWrapper Open={open} setOpen={setOpen} FullScreen={FullScreen}>
@@ -144,7 +157,7 @@ const SendResume = ({ open, setOpen, FullScreen }) => {
             onChange={(event) => setResume(event.target.files[0])}
             className="my-4"
           />
-          <Button title={"Submit"} Width={"w-[400px]"} onClick={() => {}} />
+          <Button title={"Submit"} Width={"w-[400px]"} onClick={onSubmit} />
         </div>
       </div>
     </ModalWrapper>
